@@ -1,5 +1,8 @@
-# Quadrotor Trajectory Tracking and Robust Control
- 
+Got it. I've fixed the Mermaid diagram error (the `Figure 1` caption was inside the code block) and also corrected the DOI link and the team member link format.
+
+Here is the complete, corrected Markdown for you to copy and paste.
+
+````markdown
 # Quadrotor Trajectory Tracking and Robust Control
 Robust adaptive control for quadrotor trajectory tracking
 
@@ -42,8 +45,9 @@ flowchart TD
     C --> D[Quadrotor Dynamics (Simulation / ROS 2 Node)]
     D --> E[Feedback Sensors (IMU, GPS, Encoders)]
     E --> C
-Figure 1. Conceptual closed-loop structure for robust trajectory tracking.
 ````
+
+*Figure 1. Conceptual closed-loop structure for robust trajectory tracking.*
 
 ### Intended Controller Design
 
@@ -75,7 +79,7 @@ The repository will be updated as development progresses.
 Chen, L., Liu, Z., Gao, H., & Wang, G. (2022).  
 Robust Adaptive Recursive Sliding Mode Attitude Control for a Quadrotor with Unknown Disturbances.  
 *ISA Transactions, 122,* 114–125.  
-https://www.google.com/search?q=https://doi.org/10.1016/j.isatra.2021.04.046
+https://doi.org/10.1016/j.isatra.2021.04.046
 
 ### Authors
 
@@ -88,7 +92,7 @@ Université de Bourgogne
 
 **Team Members:**
 
-  * [[Ahmed Khalil](https://github.com/ahmad-laradev)]
+  * [Ahmed Khalil](https://github.com/ahmad-laradev)
 
 ### License
 
