@@ -1,8 +1,3 @@
-Got it. I've fixed the Mermaid diagram error (the `Figure 1` caption was inside the code block) and also corrected the DOI link and the team member link format.
-
-Here is the complete, corrected Markdown for you to copy and paste.
-
-````markdown
 # Quadrotor Trajectory Tracking and Robust Control
 Robust adaptive control for quadrotor trajectory tracking
 
