@@ -37,7 +37,7 @@ This work aims to develop a control method that:
 
 ```mermaid
 flowchart TD
-    A[Reference Trajectory (x, y, z, ψ)] --> B[Trajectory Planner]
+    A["Reference Trajectory (x, y, z, \psi)"] --> B[Trajectory Planner]
     B --> C[ARSMC Controller]
     C --> D[Quadrotor Dynamics (Simulation / ROS 2 Node)]
     D --> E[Feedback Sensors (IMU, GPS, Encoders)]
