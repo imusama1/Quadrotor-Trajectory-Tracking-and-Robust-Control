@@ -35,12 +35,12 @@ This work aims to develop a control method that:
 
 ```mermaid
 flowchart TD
-    A["Reference Trajectory (x, y, z, \psi)"] --> B[Trajectory Planner]
+    A[Reference Trajectory<br/>x, y, z, ψ] --> B[Trajectory Planner]
     B --> C[ARSMC Controller]
-    C --> D[Quadrotor Dynamics (Simulation / ROS 2 Node)]
-    D --> E[Feedback Sensors (IMU, GPS, Encoders)]
+    C --> D[Quadrotor Dynamics<br/>Simulation / ROS 2 Node]
+    D --> E[Feedback Sensors<br/>IMU, GPS, Encoders]
     E --> C
-````
+```
 
 *Figure 1. Conceptual closed-loop structure for robust trajectory tracking.*
 
@@ -94,6 +94,4 @@ Université de Bourgogne
 This repository is created for academic and research purposes under the VIBOT MSc program.
 
 Use or reference is permitted with proper credit.
-
-```
 ```
