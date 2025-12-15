@@ -349,6 +349,23 @@ The FDO estimates external disturbances affecting both translation and rotation.
 
 ---
 
+
+# 9. Ros2 Gazebo Experiment
+
+## Simulation Flight Trajectory
+
+
+
+<p align="center">
+  <a href="https://youtu.be/D-HHGSvnXh8">
+    <img src="https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/hqdefault.jpg" width="60%">
+  </a>
+</p>
+<p align="center"><strong>Figure 9.1:</strong> Click to watch the simulation drone flight video(watch on 2x).</p>
+
+
+
+
 # 9. Hardware Experiment
 
 ## Real Flight Trajectory
