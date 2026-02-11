@@ -70,6 +70,31 @@ class LoggingParams:
 
 
 @dataclass
+class OccupancyGridParams:
+    """Occupancy grid mapping parameters."""
+    # Grid dimensions (meters)
+    x_min: float = -10.0
+    x_max: float = 10.0
+    y_min: float = -10.0
+    y_max: float = 10.0
+    z_min: float = -5.0
+    z_max: float = 5.0
+    
+    # Grid resolution (meters per cell)
+    resolution: float = 0.1
+    
+    # Occupancy thresholds
+    occupied_threshold: float = 0.65
+    free_threshold: float = 0.35
+    
+    # Safety margin around obstacles (meters)
+    safety_margin: float = 0.5
+    
+    # Enable 3D grid
+    use_3d: bool = False
+
+
+@dataclass
 class ControllerConfig:
     """Complete controller configuration."""
     system: SystemParams = field(default_factory=SystemParams)
@@ -79,6 +104,7 @@ class ControllerConfig:
     control_output: ControlOutputParams = field(default_factory=ControlOutputParams)
     disturbance: DisturbanceParams = field(default_factory=DisturbanceParams)
     logging: LoggingParams = field(default_factory=LoggingParams)
+    occupancy_grid: OccupancyGridParams = field(default_factory=OccupancyGridParams)
     control_rate: float = 50.0  # Hz
 
 
