@@ -1,3 +1,4 @@
+
 # Hybrid Finite-Time Control for Quadrotor Trajectory Tracking  
 ### Semester Project – Sensors-Based Controls  
 ### Master in Computer Vision & Robotics (CVR), 2025  
@@ -15,23 +16,26 @@
 6. [Simulation Setup](#6-simulation-setup)  
 7. [Simulation Results](#7-simulation-results)  
 8. [Additional Analysis](#8-additional-analysis)  
-9. [Hardware Experiment](#9-hardware-experiment)  
-10. [How to Run](#10-how-to-run)  
-11. [Conclusion](#11-conclusion)
+9. [ROS2 Gazebo Experiment](#9-ros2-gazebo-experiment)  
+10. [Hardware Experiment](#10-hardware-experiment)  
+11. [How to Run](#11-how-to-run)  
+12. [Conclusion](#12-conclusion)
 
 ---
 
 # 1. Abstract
 
-This project presents a hybrid finite-time control scheme for quadrotor trajectory tracking.  
+This project presents a hybrid finite‑time control scheme for quadrotor trajectory tracking.  
 The controller combines:
 
 - Adaptive Integral Sliding Mode (AISM) for altitude  
 - Backstepping for planar position  
 - Nonsingular Terminal Sliding Mode (NTSM) for attitude  
-- A Finite-Time Disturbance Observer (FDO) for robustness  
+- A Finite‑Time Disturbance Observer (FDO) for robustness  
 
 The objective is accurate tracking of a 3D circular path under disturbances, validated both in simulation and on the AR.Drone 2.0 platform.
+
+> **Note on development** – This project was **vibe coded** (AI‑assisted) for the implementation, but the control architecture design, parameter tuning, debugging, and integration with PX4/Gazebo were my own. It reflects my strong interest in robust drone control and is the foundation I’m actively building on.
 
 ---
 
@@ -112,7 +116,7 @@ $$
 s_z = \dot{e}_z + c_z e_z + k_z \int e_z \, dt
 $$
 
-AISM enhances robustness and ensures finite-time convergence.
+AISM enhances robustness and ensures finite‑time convergence.
 
 ---
 
@@ -142,7 +146,7 @@ The FDO estimates external disturbances affecting both translation and rotation.
 
 ---
 
-## Hybrid Finite-Time Control Architecture
+## Hybrid Finite‑Time Control Architecture
 
 <p align="center">
   <img src="media/hybrid_control_block_new.png" width="70%">
@@ -156,7 +160,7 @@ The FDO estimates external disturbances affecting both translation and rotation.
 <p align="center">
   <img src="media/backstepping_virtual_control_new.png" width="70%">
 </p>
-<p align="center"><strong>Figure 5.2:</strong> Backstepping-based virtual control mapping.</p>
+<p align="center"><strong>Figure 5.2:</strong> Backstepping‑based virtual control mapping.</p>
 
 ---
 
@@ -165,7 +169,7 @@ The FDO estimates external disturbances affecting both translation and rotation.
 <p align="center">
   <img src="media/high_level_block_diagram_new.png" width="70%">
 </p>
-<p align="center"><strong>Figure 5.3:</strong> High-level simulation signal flow.</p>
+<p align="center"><strong>Figure 5.3:</strong> High‑level simulation signal flow.</p>
 
 ---
 
@@ -215,7 +219,7 @@ The FDO estimates external disturbances affecting both translation and rotation.
 <p align="center">
   <img src="media/02_xy_trajectory.png" width="70%">
 </p>
-<p align="center"><strong>Figure 7.2:</strong> Top-view circular path tracking.</p>
+<p align="center"><strong>Figure 7.2:</strong> Top‑view circular path tracking.</p>
 
 ---
 
@@ -336,7 +340,7 @@ The FDO estimates external disturbances affecting both translation and rotation.
 <p align="center">
   <img src="media/fig_6_3_xyz_tracking_errors.png" width="70%">
 </p>
-<p align="center"><strong>Figure 8.6:</strong> Component-wise position errors.</p>
+<p align="center"><strong>Figure 8.6:</strong> Component‑wise position errors.</p>
 
 ---
 
@@ -349,38 +353,33 @@ The FDO estimates external disturbances affecting both translation and rotation.
 
 ---
 
+# 9. ROS2 Gazebo Experiment
 
-# 9. Ros2 Gazebo Experiment
-
-## Simulation Flight Trajectory
-
-
+## Simulation Flight Trajectory  
 
 <p align="center">
   <a href="https://youtu.be/D-HHGSvnXh8">
-    <img src="https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/hqdefault.jpg" width="60%">
+    <img src="https://img.youtube.com/vi/D-HHGSvnXh8/hqdefault.jpg" width="60%">
   </a>
 </p>
-<p align="center"><strong>Figure 9.1:</strong> Click to watch the simulation drone flight video(watch on 2x).</p>
+<p align="center"><strong>Figure 9.1:</strong> Click to watch the simulation drone flight video (watch on 2x).</p>
 
+---
 
-
-
-# 9. Hardware Experiment
+# 10. Hardware Experiment
 
 ## Real Flight Trajectory
 
 <p align="center">
   <a href="https://youtube.com/shorts/qWHe0PwsiY0">
-    <img src="https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/hqdefault.jpg" width="60%">
+    <img src="https://img.youtube.com/vi/qWHe0PwsiY0/hqdefault.jpg" width="60%">
   </a>
 </p>
-<p align="center"><strong>Figure 9.1:</strong> Click to watch the real AR.Drone 2.0 flight video.</p>
-
+<p align="center"><strong>Figure 10.1:</strong> Click to watch the real AR.Drone 2.0 flight video.</p>
 
 ---
 
-# 10. How to Run
+# 11. How to Run
 
 This repository contains three main implementations:
 
@@ -416,7 +415,7 @@ The simulation will use all controllers and generate results and plots automatic
 - numpy  
 - matplotlib  
 - (optional) ROS (if using with real AR.Drone 2.0 hardware)  
-- AR.Drone 2.0 (for hardware-in-the-loop)
+- AR.Drone 2.0 (for hardware‑in‑the‑loop)
 
 **Install dependencies:**
 ```bash
@@ -493,9 +492,8 @@ pip install numpy matplotlib
 
 ---
 
-# 11. Conclusion
+# 12. Conclusion
 
-The hybrid finite-time controller demonstrates strong tracking accuracy, fast convergence, and robustness to disturbances.  
+The hybrid finite‑time controller demonstrates strong tracking accuracy, fast convergence, and robustness to disturbances.  
 Both simulation and hardware results verify the effectiveness of combining AISM, Backstepping, NTSM, and FDO for quadrotor trajectory tracking tasks.
 
----
