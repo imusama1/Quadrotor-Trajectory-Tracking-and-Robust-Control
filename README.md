@@ -35,8 +35,6 @@ The controller combines:
 
 The objective is accurate tracking of a 3D circular path under disturbances, validated both in simulation and on the AR.Drone 2.0 platform.
 
-> **Note on development** – This project was **vibe coded** (AI‑assisted) for the implementation, but the control architecture design, parameter tuning, debugging, and integration with PX4/Gazebo were my own. It reflects my strong interest in robust drone control and is the foundation I’m actively building on.
-
 ---
 
 # 2. Introduction
